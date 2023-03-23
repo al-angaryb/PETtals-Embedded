@@ -1,0 +1,42 @@
+The system is: Windows - 10.0.19042 - AMD64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.34.31933/bin/Hostx86/x86/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31937 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+CMakeCXXCompilerId.cpp
+Microsoft (R) Incremental Linker Version 14.34.31937.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCXXCompilerId.exe 
+CMakeCXXCompilerId.obj 
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pioasm/CMakeFiles/3.24.3/CompilerIdCXX/CMakeCXXCompilerId.exe"
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pioasm/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/VSARM/mingw/mingw32/bin/mingw32-make.exe -f Makefile cmTC_29c26/fast && mingw32-make.exe[3]: Entering directory 'C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pioasm/CMakeFiles/CMakeTmp'
+C:/VSARM/mingw/mingw32/bin/mingw32-make.exe  -f CMakeFiles\cmTC_29c26.dir\build.make CMakeFiles/cmTC_29c26.dir/build
+mingw32-make.exe[4]: Entering directory 'C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pioasm/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_29c26.dir/CMakeCXXCompilerABI.cpp.obj
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_cl_compile_depends --dep-file=CMakeFiles\cmTC_29c26.dir\CMakeCXXCompilerABI.cpp.obj.d --working-dir=C:\Users\al-angaryb\Documents\SenDes_Code\API\build\pioasm\CMakeFiles\CMakeTmp --filter-prefix="Note: including file: " -- C:\PROGRA~2\MICROS~4\2022\BUILDT~1\VC\Tools\MSVC\1434~1.319\bin\Hostx86\x86\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /W3 /GR /EHsc  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_29c26.dir\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\cmTC_29c26.dir/ /FS -c "C:\Program Files\CMake\share\cmake-3.24\Modules\CMakeCXXCompilerABI.cpp"
+CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_29c26.exe
+"C:\Program Files\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_29c26.dir\link.txt --verbose=1
+"C:\Program Files\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_29c26.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100203~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100203~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MICROS~4\2022\BUILDT~1\VC\Tools\MSVC\1434~1.319\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_29c26.dir\objects1.rsp  /out:cmTC_29c26.exe /implib:cmTC_29c26.lib /pdb:C:\Users\al-angaryb\Documents\SenDes_Code\API\build\pioasm\CMakeFiles\CMakeTmp\cmTC_29c26.pdb /version:0.0 /machine:X86  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+mingw32-make.exe[4]: Leaving directory 'C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pioasm/CMakeFiles/CMakeTmp'
+mingw32-make.exe[3]: Leaving directory 'C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pioasm/CMakeFiles/CMakeTmp'
+
+
+
