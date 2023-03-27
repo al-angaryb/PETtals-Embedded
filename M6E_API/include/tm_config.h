@@ -170,7 +170,7 @@ extern "C" {
  * native interfaces (COM1 on Windows, /dev/ttyS0, /dev/ttyUSB0 on
  * Linux, etc.).
  */
-//#define TMR_ENABLE_SERIAL_TRANSPORT_NATIVE
+#define TMR_ENABLE_SERIAL_TRANSPORT_NATIVE
 
 /**
  * The longest possible name for a reader.
@@ -210,7 +210,7 @@ extern "C" {
  */
 //#define TMR_ENABLE_LLRP_TRANSPORT
 #ifndef WIN32
-#define TMR_ENABLE_LLRP_SERIAL_TRANSPORT
+//#define TMR_ENABLE_LLRP_SERIAL_TRANSPORT
 #endif
 
 /**
@@ -253,7 +253,7 @@ Note:To run readsync_baremetal codelet you have to
  ** Run make with TMR_ENABLE_SERIAL_READER_ONLY=1 defined
  ** Add -DTMR_ENABLE_SERIAL_READER_ONLY=1 to your compiler flags
  */ 
-//#define TMR_ENABLE_SERIAL_READER_ONLY
+#define TMR_ENABLE_SERIAL_READER_ONLY
 
 /**
  * Define this to enable support for background reads using native threads.

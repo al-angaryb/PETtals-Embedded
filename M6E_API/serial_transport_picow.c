@@ -150,7 +150,7 @@ s_flush(TMR_SR_SerialTransport *this)
  * or acquire other communication resources at this time.
  */
 TMR_Status
-TMR_SR_SerialTransportDummyInit(TMR_SR_SerialTransport *transport,
+TMR_SR_SerialTransportNativeInit(TMR_SR_SerialTransport *transport,
 								TMR_SR_SerialPortNativeContext *context, void *other)
 {
 
