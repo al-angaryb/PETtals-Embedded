@@ -19,27 +19,25 @@ pico_sdk_init()
 add_subdirectory(SERVO)
 add_subdirectory(MFRC522)
 add_subdirectory(BUTTON)
+add_subdirectory(M6E_API)
 
-add_library(READER)
+add_executable(main
+    main.c
+)
 
-# add_executable(main
-#     main.c
-# )
-
-# pico_enable_stdio_usb(main 1)
-# pico_enable_stdio_uart(main 0)
+pico_enable_stdio_usb(main 1)
+pico_enable_stdio_uart(main 0)
 
 
-# target_link_libraries(main 
-#             pico_stdlib 
-#             hardware_gpio 
-#             hardware_pwm 
-#             hardware_clocks)
+target_link_libraries(main 
+            pico_stdlib 
+            tm_reader
+           )
 
 
 
 
-# pico_add_extra_outputs(main)
+pico_add_extra_outputs(main)
 
 
 #add_subdirectory(./examples)
