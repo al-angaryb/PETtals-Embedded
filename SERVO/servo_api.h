@@ -2,10 +2,9 @@
 #define servo_api_h
 
 #include "pico/stdlib.h"
-#include <stdio.h>
-#include "hardware/pwm.h"
 #include "hardware/clocks.h"
-
+#include "hardware/pwm.h"
+#include <stdio.h>
 
 #define CLOCK_DIV 64
 #define WRAP 39062

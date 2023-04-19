@@ -17,26 +17,42 @@ pico_sdk_init()
 # include_directories("VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib")
 
 add_subdirectory(SERVO)
-add_subdirectory(MFRC522)
-add_subdirectory(BUTTON)
-add_subdirectory(M6E_API)
-
+# add_subdirectory(MFRC522)
+# add_subdirectory(BUTTON)
+# add_subdirectory(M6E_API)
+add_subdirectory(M6E)
 add_executable(main
     main.c
 )
 
+
+
+# This is the linker if you are using the Mercury API and main_nonFunc.c.txt as the main file. 
+# You will also need to include the M6E_API sub directory
+# target_link_libraries(main 
+#             pico_stdlib 
+#             tm_reader
+#             tmr_utils
+#             tmr_strerror
+#             tmr_param
+#             tmr_loadsave_configuration
+#             tm_reader_async
+#             serial_transport
+#             serial_reader
+#             serial_reader_l3
+#             osdep
+#             llrp_reader
+#             hex_bytes
+#            )
+
+target_link_libraries(main
+    pico_stdlib
+    m6e_uhf_api
+    servo_api
+    )
+
 pico_enable_stdio_usb(main 1)
-pico_enable_stdio_uart(main 0)
-
-
-target_link_libraries(main 
-            pico_stdlib 
-            tm_reader
-           )
-
-
-
-
+pico_enable_stdio_uart(main 1)
 pico_add_extra_outputs(main)
 
 
