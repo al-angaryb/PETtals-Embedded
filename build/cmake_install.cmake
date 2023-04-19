@@ -41,8 +41,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pico-sdk/cmake_install.cmake")
   include("C:/Users/al-angaryb/Documents/SenDes_Code/API/build/SERVO/cmake_install.cmake")
-  include("C:/Users/al-angaryb/Documents/SenDes_Code/API/build/MFRC522/cmake_install.cmake")
-  include("C:/Users/al-angaryb/Documents/SenDes_Code/API/build/BUTTON/cmake_install.cmake")
+  include("C:/Users/al-angaryb/Documents/SenDes_Code/API/build/M6E/cmake_install.cmake")
 
 endif()
 

@@ -1,3 +1,5 @@
+C:/Users/al-angaryb/Documents/SenDes_Code/API/build/CMakeFiles/main.dir
+C:/Users/al-angaryb/Documents/SenDes_Code/API/build/CMakeFiles/ELF2UF2Build.dir
 C:/Users/al-angaryb/Documents/SenDes_Code/API/build/CMakeFiles/edit_cache.dir
 C:/Users/al-angaryb/Documents/SenDes_Code/API/build/CMakeFiles/rebuild_cache.dir
 C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pico-sdk/CMakeFiles/edit_cache.dir
@@ -152,13 +154,9 @@ C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pico-sdk/src/rp2040/hardware
 C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pico-sdk/src/rp2040/hardware_structs/CMakeFiles/rebuild_cache.dir
 C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pico-sdk/docs/CMakeFiles/edit_cache.dir
 C:/Users/al-angaryb/Documents/SenDes_Code/API/build/pico-sdk/docs/CMakeFiles/rebuild_cache.dir
-C:/Users/al-angaryb/Documents/SenDes_Code/API/build/SERVO/CMakeFiles/servo_test.dir
-C:/Users/al-angaryb/Documents/SenDes_Code/API/build/SERVO/CMakeFiles/ELF2UF2Build.dir
+C:/Users/al-angaryb/Documents/SenDes_Code/API/build/SERVO/CMakeFiles/servo_api.dir
 C:/Users/al-angaryb/Documents/SenDes_Code/API/build/SERVO/CMakeFiles/edit_cache.dir
 C:/Users/al-angaryb/Documents/SenDes_Code/API/build/SERVO/CMakeFiles/rebuild_cache.dir
-C:/Users/al-angaryb/Documents/SenDes_Code/API/build/MFRC522/CMakeFiles/rfid_test.dir
-C:/Users/al-angaryb/Documents/SenDes_Code/API/build/MFRC522/CMakeFiles/edit_cache.dir
-C:/Users/al-angaryb/Documents/SenDes_Code/API/build/MFRC522/CMakeFiles/rebuild_cache.dir
-C:/Users/al-angaryb/Documents/SenDes_Code/API/build/BUTTON/CMakeFiles/button_test.dir
-C:/Users/al-angaryb/Documents/SenDes_Code/API/build/BUTTON/CMakeFiles/edit_cache.dir
-C:/Users/al-angaryb/Documents/SenDes_Code/API/build/BUTTON/CMakeFiles/rebuild_cache.dir
+C:/Users/al-angaryb/Documents/SenDes_Code/API/build/M6E/CMakeFiles/m6e_uhf_api.dir
+C:/Users/al-angaryb/Documents/SenDes_Code/API/build/M6E/CMakeFiles/edit_cache.dir
+C:/Users/al-angaryb/Documents/SenDes_Code/API/build/M6E/CMakeFiles/rebuild_cache.dir

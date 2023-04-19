@@ -69,18 +69,19 @@ include CMakeFiles/elf2uf2.dir/progress.make
 include CMakeFiles/elf2uf2.dir/flags.make
 
 CMakeFiles/elf2uf2.dir/main.cpp.obj: CMakeFiles/elf2uf2.dir/flags.make
+CMakeFiles/elf2uf2.dir/main.cpp.obj: CMakeFiles/elf2uf2.dir/includes_CXX.rsp
 CMakeFiles/elf2uf2.dir/main.cpp.obj: C:/VSARM/sdk/pico/pico-sdk/tools/elf2uf2/main.cpp
 CMakeFiles/elf2uf2.dir/main.cpp.obj: CMakeFiles/elf2uf2.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\al-angaryb\Documents\SenDes_Code\API\build\elf2uf2\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/elf2uf2.dir/main.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\elf2uf2.dir\main.cpp.obj.d --working-dir=C:\Users\al-angaryb\Documents\SenDes_Code\API\build\elf2uf2 --filter-prefix="Note: including file: " -- C:\PROGRA~2\MICROS~4\2022\BUILDT~1\VC\Tools\MSVC\1434~1.319\bin\Hostx86\x86\cl.exe  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\elf2uf2.dir\main.cpp.obj /FdCMakeFiles\elf2uf2.dir/ /FS -c C:\VSARM\sdk\pico\pico-sdk\tools\elf2uf2\main.cpp
+	C:\VSARM\mingw\mingw32\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/elf2uf2.dir/main.cpp.obj -MF CMakeFiles\elf2uf2.dir\main.cpp.obj.d -o CMakeFiles\elf2uf2.dir\main.cpp.obj -c C:\VSARM\sdk\pico\pico-sdk\tools\elf2uf2\main.cpp
 
 CMakeFiles/elf2uf2.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/elf2uf2.dir/main.cpp.i"
-	C:\PROGRA~2\MICROS~4\2022\BUILDT~1\VC\Tools\MSVC\1434~1.319\bin\Hostx86\x86\cl.exe > CMakeFiles\elf2uf2.dir\main.cpp.i  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\VSARM\sdk\pico\pico-sdk\tools\elf2uf2\main.cpp
+	C:\VSARM\mingw\mingw32\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\VSARM\sdk\pico\pico-sdk\tools\elf2uf2\main.cpp > CMakeFiles\elf2uf2.dir\main.cpp.i
 
 CMakeFiles/elf2uf2.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/elf2uf2.dir/main.cpp.s"
-	C:\PROGRA~2\MICROS~4\2022\BUILDT~1\VC\Tools\MSVC\1434~1.319\bin\Hostx86\x86\cl.exe  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\elf2uf2.dir\main.cpp.s /c C:\VSARM\sdk\pico\pico-sdk\tools\elf2uf2\main.cpp
+	C:\VSARM\mingw\mingw32\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\VSARM\sdk\pico\pico-sdk\tools\elf2uf2\main.cpp -o CMakeFiles\elf2uf2.dir\main.cpp.s
 
 # Object files for target elf2uf2
 elf2uf2_OBJECTS = \
@@ -91,6 +92,7 @@ elf2uf2_EXTERNAL_OBJECTS =
 
 elf2uf2.exe: CMakeFiles/elf2uf2.dir/main.cpp.obj
 elf2uf2.exe: CMakeFiles/elf2uf2.dir/build.make
+elf2uf2.exe: CMakeFiles/elf2uf2.dir/linklibs.rsp
 elf2uf2.exe: CMakeFiles/elf2uf2.dir/objects1.rsp
 elf2uf2.exe: CMakeFiles/elf2uf2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\al-angaryb\Documents\SenDes_Code\API\build\elf2uf2\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable elf2uf2.exe"

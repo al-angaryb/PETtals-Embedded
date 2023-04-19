@@ -30,15 +30,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-3.24/Modules/FindPackageMessage.cmake"
   "C:/Program Files/CMake/share/cmake-3.24/Modules/FindPython/Support.cmake"
   "C:/Program Files/CMake/share/cmake-3.24/Modules/FindPython3.cmake"
-  "C:/Users/al-angaryb/Documents/SenDes_Code/API/BUTTON/CMakeLists.txt"
   "C:/Users/al-angaryb/Documents/SenDes_Code/API/CMakeLists.txt"
-  "C:/Users/al-angaryb/Documents/SenDes_Code/API/MFRC522/CMakeLists.txt"
+  "C:/Users/al-angaryb/Documents/SenDes_Code/API/M6E/CMakeLists.txt"
   "C:/Users/al-angaryb/Documents/SenDes_Code/API/SERVO/CMakeLists.txt"
   "CMakeFiles/3.24.3/CMakeASMCompiler.cmake"
   "CMakeFiles/3.24.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.24.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.24.3/CMakeSystem.cmake"
-  "SERVO/elf2uf2/tmp/ELF2UF2Build-mkdirs.cmake"
+  "elf2uf2/tmp/ELF2UF2Build-mkdirs.cmake"
   "pico-sdk/src/rp2_common/cyw43_driver/pioasm/tmp/PioasmBuild-mkdirs.cmake"
   "C:/Users/al-angaryb/Documents/SenDes_Code/API/pico_sdk_import.cmake"
   "C:/VSARM/sdk/pico/pico-sdk/CMakeLists.txt"
@@ -147,6 +146,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "elf2uf2/tmp/ELF2UF2Build-mkdirs.cmake"
+  "elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-source_dirinfo.txt"
+  "elf2uf2/tmp/ELF2UF2Build-cfgcmd.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "generated/pico_base/pico/version.h"
   "generated/pico_base/pico/config_autogen.h"
@@ -227,24 +229,20 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "pico-sdk/src/rp2040/hardware_regs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/src/rp2040/hardware_structs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "pico-sdk/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "SERVO/elf2uf2/tmp/ELF2UF2Build-mkdirs.cmake"
-  "SERVO/elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-source_dirinfo.txt"
-  "SERVO/elf2uf2/tmp/ELF2UF2Build-cfgcmd.txt"
   "SERVO/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "MFRC522/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "BUTTON/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "M6E/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/main.dir/DependInfo.cmake"
+  "CMakeFiles/ELF2UF2Build.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/cyw43_firmware_package.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/PioasmBuild.dir/DependInfo.cmake"
   "pico-sdk/src/rp2_common/cyw43_driver/CMakeFiles/cyw43_driver_picow_cyw43_bus_pio_spi_pio_h.dir/DependInfo.cmake"
-  "SERVO/CMakeFiles/servo_test.dir/DependInfo.cmake"
-  "SERVO/CMakeFiles/ELF2UF2Build.dir/DependInfo.cmake"
-  "MFRC522/CMakeFiles/rfid_test.dir/DependInfo.cmake"
-  "BUTTON/CMakeFiles/button_test.dir/DependInfo.cmake"
+  "SERVO/CMakeFiles/servo_api.dir/DependInfo.cmake"
+  "M6E/CMakeFiles/m6e_uhf_api.dir/DependInfo.cmake"
   )
