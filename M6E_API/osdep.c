@@ -10,7 +10,7 @@
 #include "osdep.h"
 
 uint64_t tmr_gettime(void) {
-  uint64_t t = absolute_time_t();
+  uint64_t t = get_absolute_time();
   uint32_t t_ms = us_to_ms(t);
   return (uint64_t) t_ms;
 }

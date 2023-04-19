@@ -30,6 +30,7 @@
 
 #include "tm_reader.h"
 #include "hardware/uart.h"
+#include "pico/stdlib.h"
 
 #define UART_ID uart0
 #define BAUD_RATE 115200
@@ -149,9 +150,8 @@ s_flush(TMR_SR_SerialTransport *this)
  * The initialization should not actually open a communication channel
  * or acquire other communication resources at this time.
  */
-TMR_Status
-TMR_SR_SerialTransportNativeInit(TMR_SR_SerialTransport *transport,
-								TMR_SR_SerialPortNativeContext *context, void *other)
+TMR_Status TMR_SR_SerialTransportNativeInit(TMR_SR_SerialTransport *transport,
+								TMR_SR_SerialPortNativeContext *context, const char* device)
 {
 
   /* Each of the callback functions will be passed the transport
@@ -159,7 +159,7 @@ TMR_SR_SerialTransportNativeInit(TMR_SR_SerialTransport *transport,
    * structure to store the information specific to the transport,
    * such as a file handle or the memory address of the FIFO.
    */
-  transport->cookie = other;
+  transport->cookie = device;
 
   transport->open = s_open;
   transport->sendBytes = s_sendBytes;
@@ -171,18 +171,18 @@ TMR_SR_SerialTransportNativeInit(TMR_SR_SerialTransport *transport,
   return TMR_SUCCESS;
 }
 
-/**
- * Initialize a TMR_SR_SerialTransport structure with a given serial device.
- *
- * @param transport The TMR_SR_SerialTransport structure to initialize.
- * @param context A TMR_SR_SerialPortNativeContext structure for the callbacks to use.
- * @param device The path or name of the serial device (@c /dev/ttyS0, @c COM1)
- */
-TMR_Status
-TMR_SR_SerialTransportNativeInit(TMR_SR_SerialTransport *transport,
-                                 TMR_SR_SerialPortNativeContext *context,
-                                 const char *device)
-{
-  return TMR_SUCCESS;
-}
+// /**
+//  * Initialize a TMR_SR_SerialTransport structure with a given serial device.
+//  *
+//  * @param transport The TMR_SR_SerialTransport structure to initialize.
+//  * @param context A TMR_SR_SerialPortNativeContext structure for the callbacks to use.
+//  * @param device The path or name of the serial device (@c /dev/ttyS0, @c COM1)
+//  */
+// TMR_Status
+// TMR_SR_SerialTransportNativeInit(TMR_SR_SerialTransport *transport,
+//                                  TMR_SR_SerialPortNativeContext *context,
+//                                  const char *device)
+// {
+//   return TMR_SUCCESS;
+// }
 

@@ -31,10 +31,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
-#include "tm_reader.h"
-#include "serial_reader_imp.h"
-#include "tmr_utils.h"
+#include "include/tm_reader.h"
+#include "include/serial_reader_imp.h"
+#include "include/tmr_utils.h"
 
 #define EAPI_PREFIX "eapi://"
 #define EAPI_PREFIX_LEN (sizeof(EAPI_PREFIX)-1)

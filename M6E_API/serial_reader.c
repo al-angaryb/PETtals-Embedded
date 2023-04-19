@@ -31,10 +31,10 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "tm_reader.h"
-#include "serial_reader_imp.h"
-#include "tmr_utils.h"
-#include "osdep.h"
+#include "include/tm_reader.h"
+#include "include/serial_reader_imp.h"
+#include "include/tmr_utils.h"
+#include "include/osdep.h"
 
 #ifdef TMR_ENABLE_SERIAL_READER
 bool clearTagBuffer = false;
@@ -721,7 +721,7 @@ setAntennaList(struct TMR_Reader *reader, TMR_uint8List *antennas)
 }
 #ifdef TMR_ENABLE_UHF
 /**
- * Validation for “Parameters (protocol, filter, tagop) are identical in all subplans
+ * Validation for ï¿½Parameters (protocol, filter, tagop) are identical in all subplans
  * It return true if params are same across the entire set of read plans.
  */
 bool
