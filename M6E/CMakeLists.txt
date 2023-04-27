@@ -1,5 +1,5 @@
 
-add_library(m6e_uhf_api STATIC
+add_library(m6e_uhf_api  
     ${CMAKE_CURRENT_LIST_DIR}./m6e_uhf_api.c
     ${CMAKE_CURRENT_LIST_DIR}./m6e_uhf_api.h
     )
@@ -7,6 +7,7 @@ add_library(m6e_uhf_api STATIC
 # target_include_directories(m6e_uhf_api 
 #     ${CMAKE_CURRENT_LIST_DIR}
 #     )
+target_include_directories(m6e_uhf_api PUBLIC ${CMAKE_CURRENT_LIST_DIR})
 target_link_libraries(m6e_uhf_api 
     pico_stdlib
     hardware_uart

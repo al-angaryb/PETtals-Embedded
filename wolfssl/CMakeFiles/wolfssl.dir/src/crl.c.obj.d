@@ -1,0 +1,24 @@
+wolfssl/CMakeFiles/wolfssl.dir/src/crl.c.obj: \
+ C:\VSARM\pico\pettals\wolfssl\src\crl.c \
+ c:\vsarm\pico\pettals\wolfssl\wolfssl\wolfcrypt\settings.h \
+ c:\vsarm\pico\pettals\wolfssl\wolfssl\wolfcrypt\visibility.h \
+ c:\vsarm\pico\pettals\wolfssl\user_settings.h \
+ C:\VSARM\pico\pettals\FreeRTOS\FreeRTOS-Kernel\include/FreeRTOS.h \
+ c:\vsarm\armcc\102021~1.10\lib\gcc\arm-none-eabi\10.3.1\include\stddef.h \
+ c:\vsarm\armcc\102021~1.10\lib\gcc\arm-none-eabi\10.3.1\include\stdint.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\stdint.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\machine\_default_types.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\sys\features.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\_newlib_version.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\sys\_intsup.h \
+ c:\vsarm\armcc\102021~1.10\arm-none-eabi\include\sys\_stdint.h \
+ c:\vsarm\pico\pettals\freertos\freertosconfig.h \
+ C:\VSARM\pico\pettals\FreeRTOS\FreeRTOS-Kernel\include/projdefs.h \
+ C:\VSARM\pico\pettals\FreeRTOS\FreeRTOS-Kernel\include/portable.h \
+ C:\VSARM\pico\pettals\FreeRTOS\FreeRTOS-Kernel\include/deprecated_definitions.h \
+ C:\VSARM\pico\pettals\FreeRTOS\FreeRTOS-Kernel\portable\GCC\ARM_CM0/portmacro.h \
+ C:\VSARM\pico\pettals\FreeRTOS\FreeRTOS-Kernel\include/mpu_wrappers.h \
+ C:\VSARM\pico\pettals\FreeRTOS\FreeRTOS-Kernel\include/semphr.h \
+ C:\VSARM\pico\pettals\FreeRTOS\FreeRTOS-Kernel\include/queue.h \
+ C:\VSARM\pico\pettals\FreeRTOS\FreeRTOS-Kernel\include/task.h \
+ C:\VSARM\pico\pettals\FreeRTOS\FreeRTOS-Kernel\include/list.h

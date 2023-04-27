@@ -12,7 +12,7 @@ target_link_libraries(button_test
 
 
 target_include_directories(button_test PUBLIC 
-        ${CMAKE_CURRENT_SOURCE_DIR}/SERVO
+        ${CMAKE_CURRENT_SOURCE_DIR}
         )
 
 

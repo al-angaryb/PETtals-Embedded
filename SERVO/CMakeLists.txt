@@ -1,11 +1,11 @@
-add_library(servo_api STATIC
+add_library(servo_api  
         ${CMAKE_CURRENT_LIST_DIR}./servo_api.c
         ${CMAKE_CURRENT_LIST_DIR}./servo_api.h
         )
 # add_executable(servo_test
 #         servo_test.c)
-        
-target_link_libraries(servo_api
+target_include_directories(servo_api PUBLIC ${CMAKE_CURRENT_LIST_DIR})
+target_link_libraries(servo_api 
         pico_stdlib 
         hardware_gpio 
         hardware_pwm
