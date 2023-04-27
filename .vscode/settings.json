@@ -1,8 +1,5 @@
 {
     "files.associations": {
-        "stdlib.h": "c",
-        "stdio.h": "c",
-        "serial_reader_imp.h": "c",
-        "tm_reader.h": "c"
+        "servo_api.h": "c"
     }
 }
