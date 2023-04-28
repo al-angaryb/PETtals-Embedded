@@ -4,8 +4,12 @@ add_executable(main
 
 target_link_libraries(main
     pico_stdlib
+    hardware_irq
     m6e_uhf_api
     servo_api
+    FreeRTOS
+    task 
+    stdio 
     )
 
 pico_enable_stdio_usb(main 1)
