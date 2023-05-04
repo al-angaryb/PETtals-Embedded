@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 include(pico_sdk_import.cmake)
+include(lwip_import.cmake)
 
 set(PICO_BOARD pico_w)
 set(WIFI_SSID "NETGEAR60")
