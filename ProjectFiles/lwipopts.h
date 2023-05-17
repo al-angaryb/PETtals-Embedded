@@ -6,12 +6,12 @@
 //
 // This example uses a common include to avoid repetition
 #include "lwipopts_examples_common.h"
-#ifndef NO_SYS
-#define NO_SYS                      1
+/*#ifndef NO_SYS
+#define NO_SYS                      0
 #endif
 // allow override in some examples
 #ifndef LWIP_SOCKET
-#define LWIP_SOCKET                 0
+#define LWIP_SOCKET                 1
 #endif
 #if PICO_CYW43_ARCH_POLL
 #define MEM_LIBC_MALLOC             1
@@ -93,7 +93,7 @@
 #define LWIP_TIMEVAL_PRIVATE 0
 
 // not necessary, can be done either way
-#define LWIP_TCPIP_CORE_LOCKING_INPUT 1
+#define LWIP_TCPIP_CORE_LOCKING_INPUT 1*/
 
 
 #endif

@@ -4,10 +4,11 @@
 #include <string.h>
 #include "pico/time.h"
 #include "pico/stdlib.h"
-//#include "pico/cyw43_arch.h"
+#include "pico/cyw43_arch.h"
 #include "hardware/uart.h"
 #include "hardware/gpio.h"
 #include "Servo_API.c"
+#include "lwipopts.h"
 //#include "ping.h"
 //#include "wolfssl/ssl.h"
 
@@ -66,7 +67,7 @@ void servo_task(){
     }
 }
 
-/*void ping_task(){
+void ping_task(){
     cyw43_arch_enable_sta_mode();
     printf("Connecting to WiFi...\n");
     if (cyw43_arch_wifi_connect_timeout_ms(WIFI_SSID, WIFI_PASSWORD, CYW43_AUTH_WPA2_AES_PSK, 30000)) {
@@ -85,7 +86,7 @@ void servo_task(){
     }
 
     cyw43_arch_deinit();
-}*/
+}
 
 int main()
 {
