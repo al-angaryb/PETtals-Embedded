@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "pico/stdlib.h"
 #include "pico/cyw43_arch.h"
 #include "lwip/apps/http_client.h"
@@ -8,10 +9,109 @@
 
 //#define HOST "http://10.0.0.58/login"
 //#define PORT 80
+#define MAX_PETS 10
+#define MAX_ID_PER_PET 10
 
-char petBuff[4096];
+char petBuff[1000];
 uint32_t country = CYW43_COUNTRY_USA;
 uint32_t auth = CYW43_AUTH_WPA2_MIXED_PSK;
+
+
+typedef struct {
+    char name[50];
+    char ids[MAX_ID_PER_PET][50];
+    char schedule[500];
+    int id_count;
+}petData;
+
+typedef struct {
+    int day;
+    char time[6];
+} DayAndTime;
+
+typedef struct {
+    petData* pets;
+    int pet_count;
+} Data;
+
+petData pets[MAX_PETS];
+Data input;
+
+bool can_go_outside(petData* pets, int pet_count, char* time, int current_day_of_week, char* tag_id) {
+    // Assuming time is in "HH:MM" format
+    int current_hour, current_minute;
+    sscanf(time, "%d:%d", &current_hour, &current_minute);
+    int time_now = current_hour * 60 + current_minute;
+
+    // Find the pet by tag id
+    for (int i = 0; i < pet_count; i++) {
+        for (int j = 0; j < pets[i].id_count; j++) {
+            if (strcmp(pets[i].ids[j], tag_id) == 0) {
+            // Found the pet, now parse its schedule
+            int start_hour, start_minute, end_hour, end_minute;
+            bool days[7];
+            sscanf(pets[i].schedule, "{TimeOfDay(%d:%d) TimeOfDay(%d:%d) %d %d %d %d %d %d %d }",
+            &start_hour, &start_minute, &end_hour, &end_minute,
+            &days[0], &days[1], &days[2], &days[3],
+            &days[4], &days[5], &days[6]);
+
+            int start_time = start_hour * 60 + start_minute;
+            int end_time = end_hour * 60 + end_minute;
+
+                if (time_now >= start_time && time_now <= end_time && days[current_day_of_week]) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
+DayAndTime parse_day_and_time(const char* str) {
+    DayAndTime result;
+    memset(&result, 0, sizeof(DayAndTime));
+
+    // Parse the day of the week and time
+    sscanf(str, "%d %5s", &result.day, result.time);
+
+    return result;
+}
+
+Data build_from_json(char data[1000]) {
+    Data output;
+    petData pets[10]; // assuming max 10 pets
+    int pet_count = 0;
+    int schedule_line = 0;
+
+    char* line = strtok(data, "\n");
+    while(line) {
+        if (strstr(line, "Pet Name:") != NULL) {
+            sscanf(line, "Pet Name: %s", pets[pet_count].name);
+            pets[pet_count].id_count = 0;
+            schedule_line = 0; // reset the schedule_line flag
+        }
+        else if (strstr(line, "Pet ID:") != NULL) {
+            sscanf(line, "Pet ID: %s", pets[pet_count].ids[pets[pet_count].id_count]);
+            pets[pet_count].id_count++;
+        }
+        else if (strstr(line, "Pet Schedules:") != NULL) {
+            schedule_line = 1; // set the schedule_line flag
+        }
+        else if (schedule_line) {
+            // If the schedule_line flag is set, this line contains the schedule
+            strncpy(pets[pet_count].schedule, line, sizeof(pets[pet_count].schedule) - 1);
+            schedule_line = 0; // reset the schedule_line flag
+        }
+        else if (strstr(line, "------------------") != NULL) {
+            pet_count++;
+        }
+        line = strtok(NULL, "\n");
+    }
+    output.pets = pets;
+    output.pet_count = pet_count;
+    return output;  
+}
+
 
 int wifi_setup(const char* hostname, ip_addr_t *ip, ip_addr_t *mask, ip_addr_t *gw){
     if(cyw43_arch_init_with_country(country)){
@@ -75,6 +175,13 @@ err_t body(void *arg, struct altcp_pcb *conn, struct pbuf *p, err_t err)
 {
     printf("body \n");
     pbuf_copy_partial(p, petBuff, p->tot_len, 0);
+    
+    printf("%s \n", petBuff);
+
+    input = build_from_json(petBuff);
+    petData* pets = input.pets;
+    int pet_count = input.pet_count;
+
 
     return ERR_OK;
 }
@@ -82,17 +189,6 @@ err_t body(void *arg, struct altcp_pcb *conn, struct pbuf *p, err_t err)
 int main()
 {
     stdio_init_all();
-
-    /*printf("Initializing Wi-Fi...\n");
-    cyw43_init_init();
-    printf("Wi-Fi initialized\n");
-
-    printf("Connecting to Wi-Fi...\n");
-    if (cyw43_arch_wifi_connect_timeout_ms(WIFI_SSID, WIFI_PASSWORD)) {
-        printf("Failed to connect to Wi-Fi\n");
-        return 1;
-        }
-    printf("Connected to Wi-Fi\n");*/
 
     wifi_setup("PETTALS", NULL, NULL, NULL);
     uint16_t port = 8880;
@@ -108,12 +204,14 @@ int main()
         body,
         NULL,
         NULL);
+
     printf("status %d \n", err);
-    for(int i = 0; i < 4095; i++){
-        printf("%c",petBuff[i]);
-    }
+
+    sleep_ms(5000);
+    
     while (true)
     {
         sleep_ms(500);
     }
+
 }
